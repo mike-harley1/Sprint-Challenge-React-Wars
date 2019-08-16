@@ -15,16 +15,23 @@ const App = () => {
   // Fetch characters from the star wars api in an effect hook. Remember, anytime you have a 
   // side effect in a component, you want to think about which state and/or props it should
   // sync up with, if any.
-
+ const Header = styled.h1`
+  font-size: 120px;
+  background: green;
+  
+  color:blue;
+ 
+  
+`
   const Cards = styled.div`
   display:flex;
-  flex-wrap:wrap;
-  justify-content:space-around;
+  flex-direction:column;
+  justify-content:space-between;
   `;
 
   return (
     <div className="App">
-      <h1 className="Header">React Wars</h1>
+      <Header className="Header">React Wars</Header>
       {/* Component DataPull allows to tap into API and acquire data to be used and this is stored in useState */}
       <DataCall data={setCharList} />
       {/* Component cards is styled component to apply some additional styles */}
@@ -33,10 +40,12 @@ const App = () => {
         {charList.map((item, index) => {
           return <CharCards
             key={index}
+            Id={index}
             CharacterName={item.name}
             CharacterHeight={item.height}
             CharacterEyeColor={item.eye_color}
             CharacterGender={item.gender}
+            homeworld={item.homeworld}
           />
         })}
       </Cards>
