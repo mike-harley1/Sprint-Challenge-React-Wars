@@ -11,7 +11,7 @@ const App = () => {
   // the state properties here.
 
   const [charList, setCharList] = useState([])
-
+  console.log(charList)
   // Fetch characters from the star wars api in an effect hook. Remember, anytime you have a 
   // side effect in a component, you want to think about which state and/or props it should
   // sync up with, if any.
@@ -32,11 +32,11 @@ const App = () => {
   return (
     <div className="App">
       <Header className="Header">React Wars</Header>
-      {/* Component DataPull allows to tap into API and acquire data to be used and this is stored in useState */}
+      {/* Component DataCall allows to tap into API and acquire data to be used and this is stored in useState */}
       <DataCall data={setCharList} />
       {/* Component cards is styled component to apply some additional styles */}
       <Cards>
-        {/* peopleList is updated from DataPull and it is passed into map() to render component 'CharacterCard' to generate card for each of the characters */}
+        {/* charList is updated from DataPull and it is passed into map() to render component 'CharCard' to generate card for each of the characters */}
         {charList.map((item, index) => {
           return <CharCards
             key={index}

@@ -7,16 +7,16 @@ React is JS library component based. React allows you to write huge applications
 1. What does it mean to think in react?
 
 
-Breaking the design down into component and planning before you write anu code.
+Breaking the design down into component and planning before you write any code.
 
 
 1. Describe state.
 
-State is the current status.
+State is the current status the data.
 
-1. Describe props.
+1. Describe props
 
-Properties 
+Sharing data between components
 
 1. What are side effects, and how do you sync effects in a React component to state or prop changes?
 
